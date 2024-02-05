@@ -97,14 +97,14 @@ async function serveClient(req: Request, basePath: string) {
         const decoded = atob(authString);
         return user.username + ':' + user.password === decoded && user.uuid === basePath;
     });
-    if (pathname === '/') {
-        return new Response(`ok`, {
-            status: 200,
-            headers: {
-                'content-type': 'text/html; charset=utf-8',
-            },
-        });
-    }
+    // if (pathname === '/') {
+    //     return new Response(`ok`, {
+    //         status: 200,
+    //         headers: {
+    //             'content-type': 'text/html; charset=utf-8',
+    //         },
+    //     });
+    // }
 
 }
 
